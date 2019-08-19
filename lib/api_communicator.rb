@@ -37,6 +37,11 @@ def show_character_movies(character)
   print_movies(films)
 end
 
+## BONUS
+
+# that `get_character_movies_from_api` method is probably pretty long. Does it do more than one job?
+# can you split it up into helper methods?
+
 def get_films_from_hash(character_hash)
   character_hash["results"][0]["films"]
 end
@@ -46,8 +51,3 @@ def call_film_urls(films_array)
     JSON.parse(RestClient.get(film))
   end
 end
-
-## BONUS
-
-# that `get_character_movies_from_api` method is probably pretty long. Does it do more than one job?
-# can you split it up into helper methods?
